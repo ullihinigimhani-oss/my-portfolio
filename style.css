@@ -472,6 +472,279 @@ section {
     font-weight: 500;
 }
 
+/* Resume Button */
+.btn-resume {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-resume:hover {
+    background-color: #059669;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* Professional Experience Section */
+.experience-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.experience-date {
+    flex: 0 0 200px;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.date {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.current-badge {
+    background-color: var(--success-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.experience-content {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.experience-content::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+}
+
+.experience-header {
+    margin-bottom: 20px;
+}
+
+.experience-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.experience-company {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.experience-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-color);
+    font-size: 14px;
+}
+
+.experience-description p {
+    margin-bottom: 15px;
+    color: var(--gray-color);
+}
+
+.experience-responsibilities {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-responsibilities li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--gray-color);
+}
+
+.experience-responsibilities li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tech-tag {
+    background-color: #e0f2fe;
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Education Section */
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.education-date {
+    flex: 0 0 200px;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.education-content {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.education-content::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+}
+
+.education-header {
+    margin-bottom: 20px;
+}
+
+.education-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.education-institution {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.education-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-color);
+    font-size: 14px;
+}
+
+.education-description p {
+    margin-bottom: 15px;
+    color: var(--gray-color);
+}
+
+.education-highlights {
+    list-style: none;
+    padding: 0;
+}
+
+.education-highlights li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--gray-color);
+}
+
+.education-highlights li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.education-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Project Icon Updates */
+.project-icon.cloud {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+.tag.cloud {
+    background-color: #e0f2fe;
+    color: #0ea5e9;
+}
+
+.tag.docker {
+    background-color: #2496ed;
+    color: white;
+}
+
+.tag.kubernetes {
+    background-color: #326ce5;
+    color: white;
+}
+
+.tag.healthcare {
+    background-color: #dc2626;
+    color: white;
+}
+
+.tag.ecommerce {
+    background-color: #8b5cf6;
+    color: white;
+}
+
+.tag.management {
+    background-color: #0891b2;
+    color: white;
+}
+
+.tag.business {
+    background-color: #059669;
+    color: white;
+}
+
 /* Skills Section */
 .skills-container {
     display: grid;

@@ -1,118 +1,93 @@
 // script.js - Professional Portfolio Interactions
 
-// Certificate Data
-const certificates = {
-    python: {
-        title: "Python for Beginners",
-        university: "University of Moratuwa, Sri Lanka",
-        holder: "Lihini Gimhani",
-        issuedBy: "Department of Computer Science & Engineering, Faculty of Engineering",
-        issuedDate: "February 28, 2023",
-        verificationCode: "Yf59Vingru",
-        verifyUrl: "https://open.uom.lk/verify",
-        content: `
-            <div class="certificate-preview">
-                <div class="preview-header">
-                    <h3 class="preview-title">Python for Beginners</h3>
-                    <div class="preview-university">University of Moratuwa, Sri Lanka</div>
-                </div>
-                <div class="preview-content">
-                    <p>This is to certify that</p>
-                    <h4 style="text-align: center; margin: 20px 0; font-size: 24px; color: var(--cert-blue);">Lihini Gimhani</h4>
-                    <p>has participated in the online learning programme in <strong>Python for Beginners</strong></p>
-                    <p>conducted by the Department of Computer Science & Engineering, Faculty of Engineering, University of Moratuwa</p>
-                    <div style="margin-top: 30px; display: flex; justify-content: space-between;">
-                        <div>
-                            <p><strong>Programme Coordinator</strong></p>
-                        </div>
-                        <div>
-                            <p><strong>Head, Department of Computer Science & Engineering</strong></p>
-                        </div>
-                    </div>
-                    <div style="margin-top: 40px; border-top: 1px solid var(--light-gray); padding-top: 20px;">
-                        <p><strong>Verification Code:</strong> Yf59Vingru</p>
-                        <p><strong>Verification URL:</strong> https://open.uom.lk/verify</p>
-                        <p><strong>Issued Date:</strong> February 28, 2023</p>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    webdesign: {
-        title: "Web Design for Beginners",
-        university: "University of Moratuwa, Sri Lanka",
-        holder: "Lihini Gimhani",
-        issuedBy: "Department of Information Technology, Faculty of Information Technology",
-        issuedDate: "2022",
-        verificationCode: "39c9W7H96",
-        verifyUrl: "https://open.uom.lk/verify",
-        content: `
-            <div class="certificate-preview">
-                <div class="preview-header">
-                    <h3 class="preview-title">Web Design for Beginners</h3>
-                    <div class="preview-university">University of Moratuwa, Sri Lanka</div>
-                </div>
-                <div class="preview-content">
-                    <p>This is to certify that</p>
-                    <h4 style="text-align: center; margin: 20px 0; font-size: 24px; color: var(--cert-blue);">Lihini Gimhani</h4>
-                    <p>has participated in the online learning programme in <strong>Web Design for Beginners</strong></p>
-                    <p>conducted by the <strong>Department of Information Technology, Faculty of Information Technology, University of Moratuwa</strong></p>
-                    <div style="margin-top: 30px;">
-                        <p><strong>Programme Coordinator</strong></p>
-                        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                            <div>
-                                <p><strong>Head, Department of Information Technology</strong></p>
-                            </div>
-                            <div>
-                                <p><strong>Director, Centre for Open & Distance Learning</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 40px; border-top: 1px solid var(--light-gray); padding-top: 20px;">
-                        <p><strong>Verification Code:</strong> 39c9W7H96</p>
-                        <p><strong>Verification URL:</strong> https://open.uom.lk/verify</p>
-                        <p><strong>Issued Year:</strong> 2022</p>
-                    </div>
-                </div>
-            </div>
-        `
-    }
-};
+// Resume Download Function
+function downloadResume() {
+    // Create resume content
+    const resumeContent = `
+LIHINI GIMHANI
+Software Engineering Undergraduate | Full Stack Developer Intern
 
-// Certificate Functions
-function viewCertificate(certId) {
-    const cert = certificates[certId];
-    if (!cert) return;
-    
-    document.getElementById('modalTitle').textContent = cert.title;
-    document.getElementById('modalBody').innerHTML = cert.content;
-    document.getElementById('certificateModal').classList.add('active');
-}
+CONTACT INFORMATION
+Email: ul.lihinigimhani@gmail.com
+LinkedIn: linkedin.com/in/lihini-gimhani
+GitHub: github.com/ullihinigimhani-oss
+Location: Colombo, Western Province, Sri Lanka
 
-function downloadCertificate(certId) {
-    const cert = certificates[certId];
-    if (!cert) return;
+PROFESSIONAL SUMMARY
+A passionate and detail-oriented Software Engineering undergraduate with hands-on experience in 
+full-stack development, microservices architecture, and cloud-native applications. Currently working 
+as a Full Stack Developer Intern at Ceylon X Corporation. Skilled in building scalable, user-centric 
+software solutions using MERN stack, Java, Docker, Kubernetes, and modern development practices.
+
+EDUCATION
+Bachelor of Science (Honours) in Information Technology
+Sri Lanka Institute of Information Technology (SLIIT) | October 2023 – December 2027
+Specialization: Software Engineering
+
+PROFESSIONAL EXPERIENCE
+Full Stack Developer Intern
+Ceylon X Corporation | January 2026 – Present
+- Developing scalable full-stack web applications using modern technologies
+- Collaborating with cross-functional teams in agile development environments
+- Building and integrating RESTful APIs for seamless data communication
+- Working with modern frontend and backend technologies including MERN stack
+- Contributing to cloud-native and enterprise-grade software solutions
+- Participating in code reviews and maintaining high code quality standards
+
+TECHNICAL SKILLS
+
+Programming Languages: Java, JavaScript, Python, SQL, HTML5, CSS3
+Frontend Technologies: React.js, Next.js, Bootstrap, Tailwind CSS, Responsive Web Design
+Backend Technologies: Node.js, Express.js, Java Servlets, RESTful APIs
+Databases: MongoDB, MySQL, SQL Server
+DevOps & Cloud: Docker, Kubernetes, GitHub Actions, CI/CD Pipelines
+Tools & Platforms: Git & GitHub, Postman, Figma, VS Code, IntelliJ IDEA
+
+FEATURED PROJECTS
+
+1. Distributed Systems Microservices Platform
+- Cloud-native microservices application using Docker and Kubernetes
+- Focused on scalability, resilience, and container orchestration
+- GitHub: github.com/ullihinigimhani-oss/DS_project.git
+
+2. MediReach
+- MERN stack healthcare platform with scalable and user-friendly solutions
+- Contributed to full-stack application development in team environment
+- GitHub: github.com/chanuka-mr/MediReach.git
+
+3. ROOHUB
+- Full-stack MERN application with modern web functionalities and responsive UI
+- Implemented backend services and database integration
+- GitHub: github.com/ullihinigimhani-oss/ROOHUB.git
+
+4. Textile Saree E-Commerce Platform
+- MERN-based e-commerce solution with product catalog and shopping workflows
+- Responsive and customer-focused design
+- GitHub: github.com/ullihinigimhani-oss/Textile-Saree.git
+
+5. Personal Library Manager
+- MERN stack personal management application for book cataloging
+- Clean, intuitive user experience design
+- GitHub: github.com/ullihinigimhani-oss/personal-library-manager.git
+
+6. Textile Management System
+- MERN-based business management platform for streamlined operations
+- Full-stack implementation with scalable architecture
+- GitHub: github.com/ullihinigimhani-oss/TEXTILE.git
+`;
     
-    const content = `
-        Certificate: ${cert.title}
-        Issued to: ${cert.holder}
-        Issued by: ${cert.issuedBy}
-        Issued Date: ${cert.issuedDate}
-        Verification Code: ${cert.verificationCode}
-        Verify at: ${cert.verifyUrl}
-    `;
-    
-    const blob = new Blob([content], { type: 'text/plain' });
+    // Create blob and download
+    const blob = new Blob([resumeContent], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${cert.title.replace(/\s+/g, '_')}_Certificate.txt`;
+    a.download = 'Lihini_Gimhani_Resume.txt';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     
-    showNotification(`${cert.title} certificate download started`, 'success');
+    showNotification('Resume download started!', 'success');
 }
 
 // Project Filtering Function
@@ -122,11 +97,13 @@ function filterProjects(category) {
     
     // Update active button
     filterButtons.forEach(btn => {
-        if (btn.textContent.toLowerCase().includes(category.toLowerCase()) || 
-            (category === 'all' && btn.textContent.toLowerCase().includes('all'))) {
+        btn.classList.remove('active');
+        if ((category === 'all' && btn.textContent.toLowerCase().includes('all')) ||
+            (category === 'mern' && btn.textContent.toLowerCase().includes('mern')) ||
+            (category === 'fullstack' && btn.textContent.toLowerCase().includes('full stack')) ||
+            (category === 'java' && btn.textContent.toLowerCase().includes('java')) ||
+            (category === 'cloud' && btn.textContent.toLowerCase().includes('cloud'))) {
             btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
         }
     });
     
@@ -176,18 +153,6 @@ function initializeProjectAnimation() {
         }, 100 * index);
     });
 }
-
-// Close modal
-document.getElementById('modalClose').addEventListener('click', function() {
-    document.getElementById('certificateModal').classList.remove('active');
-});
-
-// Close modal when clicking outside
-document.getElementById('certificateModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        this.classList.remove('active');
-    }
-});
 
 // Notification function
 function showNotification(message, type) {
